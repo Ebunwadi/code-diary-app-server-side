@@ -23,7 +23,7 @@ app.use('/auth', authApi)
 app.use('/user', verify, personApi)
 
 app.get('/', (req, res)=> {
-    res.send('hello')
+    res.send('hello world')
 })
 
 await connect()
