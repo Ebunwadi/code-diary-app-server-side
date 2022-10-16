@@ -29,6 +29,11 @@ app.get('/', (req, res)=> {
 await connect()
 console.log('successfully connected');
 
-app.listen(5050, () => {
-    console.log('server is listening on port 5050....')
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 5050;
+}
+
+app.listen(port, () => {
+    console.log('server has started successfully....')
   })
